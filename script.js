@@ -15,7 +15,11 @@ function trackTime () {
             $(".time-block").removeClass("past");
             $(".time-block").removeClass("future");
         }
-        else if
+        else if (hourRow < timeNow) {
+            $(".time-block").addClass("past");
+            $(".time-block").removeClass("present");
+            $(".time-block").removeClass("future");
+        }
     })
 
 trackTime();

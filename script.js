@@ -6,8 +6,19 @@ var timeNow = moment().hours();
 
 function trackTime () {
     $(".time-block").each(function(){
+        timeNow
         var hourRow = parseInt($(this).attr('id').split("hours"));
+        console.log(hourRow, timeNow)
+
+        if (hourRow === timeNow) {
+            $(".time-block").addClass("present");
+            $(".time-block").removeClass("past");
+            $(".time-block").removeClass("future");
+        }
+        else if
     })
+
+trackTime();
 }
 // note to self.  i need to figure out how the time-block knows that if the time in
 // the planner is past, present, or future.  so i have 8 hour id's from 9am-5pm. will have to combine

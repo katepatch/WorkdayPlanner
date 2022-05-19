@@ -27,8 +27,8 @@ function trackTime () {
         }
     })
 
-trackTime();
 }
+trackTime();
 // note to self.  i need to figure out how the time-block knows that if the time in
 // the planner is past, present, or future.  so i have 8 hour id's from 9am-5pm. will have to combine
 // with var timeNow somehow.

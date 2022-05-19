@@ -20,6 +20,11 @@ function trackTime () {
             $(".time-block").removeClass("present");
             $(".time-block").removeClass("future");
         }
+        else if (hourRow > timeNow) {
+            $(".time-block").addClass("future");
+            $(".time-block").removeClass("past");
+            &(".time-block").removeClass("present");
+        }
     })
 
 trackTime();

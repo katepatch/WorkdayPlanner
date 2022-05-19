@@ -1,7 +1,7 @@
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMM DD, YY, h:mm a"));
 
-var time = $().parent().attr("id"); //pretty sure this needs more input
+var time = $(".time-block").parent().attr("id"); //pretty sure this needs more input
 var timeNow = moment().hours();
 
 function trackTime () {

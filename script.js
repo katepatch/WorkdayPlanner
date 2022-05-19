@@ -23,7 +23,7 @@ function trackTime () {
         else if (hourRow > timeNow) {
             $(".time-block").addClass("future");
             $(".time-block").removeClass("past");
-            &(".time-block").removeClass("present");
+            $(".time-block").removeClass("present");
         }
     })
 

@@ -1,17 +1,16 @@
 $(document).ready(function() {
 
-
-var today = moment();
+    var today = moment();
 $("#currentDay").text(today.format("dddd, MMM DD, YY, h:mm a"));
 
-var time = $(".time-block").parent().attr("id"); //pretty sure this needs more input
+
 
 
 function trackTime () {
     $(".time-block").each(function(){
         var timeNow = moment().hours();
         
-        var hourRow = parseInt($(this).attr('id').substring(0, 1));
+        var hourRow = parseInt($(this).attr('id').split("-")[1]);
         console.log(hourRow, timeNow)
 
         
@@ -34,17 +33,13 @@ function trackTime () {
     })
 
 }
-
 trackTime();
-$(".saveBtn").click(function(){
-
-}) //looked up jquery for the syntax.  need to figure out what to put in this function?
-
-localStorage.setItem('9AM', 'textarea');
-
+setInterval (trackTime, 20000);
+$(".saveBtn").on("click", function() {
+    var value = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    localStorage.setItem(time, value);
 })
 
-// note to self.  i need to figure out how the time-block knows that if the time in
-// the planner is past, present, or future.  so i have 8 hour id's from 9am-5pm. will have to combine
-// with var timeNow somehow.
-//pretty sure i need to use split for the "hours" class
+$("#hour-9 .description").val(localStorage.getItem("hour-9"))
+})

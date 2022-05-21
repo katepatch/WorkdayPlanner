@@ -1,6 +1,6 @@
 # WorkdayPlanner
 
-## adding timeblocks to HTML
+## HTML
 
 I added time-blocks from 9am to 5pm for the workday schedule
 created rows with colomns for each of the 8 working hours

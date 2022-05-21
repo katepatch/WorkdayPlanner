@@ -19,3 +19,4 @@ link to github repo: <https://github.com/katepatch/WorkdayPlanner>
 
 link to deployed website: <https://katepatch.github.io/WorkdayPlanner/>
 
+![screenshot](images/PG-screenshot-workplanner.png)
